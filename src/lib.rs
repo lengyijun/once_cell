@@ -233,10 +233,11 @@ might be easier to debug than a deadlock.
 
 #![cfg_attr(not(feature = "std"), no_std)]
 
-#[cfg(feature = "std")]
-#[cfg(feature = "parking_lot")]
-#[path = "imp_pl.rs"]
-mod imp;
+#![no_std]
+use std::prelude::v1::*;
+#[macro_use]
+extern crate sgx_tstd as std;
+
 
 #[cfg(feature = "std")]
 #[cfg(not(feature = "parking_lot"))]
