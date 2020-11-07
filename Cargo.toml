@@ -21,7 +21,7 @@ exclude = ["*.png", "*.svg", "/Cargo.lock.min", "/.travis.yml", "/run-miri-tests
 # for up to two bytes smaller, depending on the size of the T.
 
 [target.'cfg(not(target_env = "sgx"))'.dependencies]
-sgx_tstd = { version = "1.0", rev = "v1.1.2", git = "https://github.com/apache/teaclave-sgx-sdk.git", features=["untrusted_fs","thread", "backtrace"] }
+sgx_tstd = { version = "1.0", rev = "v1.1.3", git = "https://github.com/apache/teaclave-sgx-sdk.git", features=["untrusted_fs","thread", "backtrace"] }
 
 [dev-dependencies]
 lazy_static = "1.0.0"
